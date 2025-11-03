@@ -27,7 +27,7 @@ export default function MainLayout({
       >
         <ThemeProvider
           attribute={'class'}
-          defaultTheme="light"
+          defaultTheme="light" // Para la actividad, poner "system" como tema por defecto
           enableSystem
           disableTransitionOnChange
         >
