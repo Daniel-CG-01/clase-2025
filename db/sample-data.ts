@@ -1,4 +1,5 @@
-const sampleData = {
+import { Prisma } from "@/lib/generated/prisma/client";
+const sampleData = { products: Prisma.ProductCreateInput[] } = {
   products: [
     {
       name: 'Polo Sporting Stretch Shirt',
