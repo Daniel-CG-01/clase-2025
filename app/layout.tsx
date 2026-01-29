@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { APP_NAME, APP_DESCRIPTION, SERVER_URL } from '@/lib/constants';
+import { ThemeProvider } from 'next-themes';
 
 const interFont = Inter({
   variable: "--font-inter-sans",
@@ -8,21 +10,30 @@ const interFont = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Proyecto Next 2025",
-  description: "Proyecto de clase con Next.js",
+  title: APP_NAME,
+  description: APP_DESCRIPTION,
+  metadataBase: new URL(SERVER_URL)
 };
 
-export default function RootLayout({
+export default function MainLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const temas = ['system', 'light', 'dark']
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${interFont.className} antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute={"class"}
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
