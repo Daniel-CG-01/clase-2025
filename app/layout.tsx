@@ -20,7 +20,7 @@ export default function MainLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const temas = ['system', 'light', 'dark']
+  const temas = ['system', 'light', 'dark', 'cyberpunk']
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -28,7 +28,7 @@ export default function MainLayout({
       >
         <ThemeProvider
           attribute={"class"}
-          defaultTheme="light"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
