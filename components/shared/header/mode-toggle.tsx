@@ -23,7 +23,7 @@ export default function ModeToggle() {
     // Si no hay nada, no dibujará nada
     if (!mounted) return null;
 
-    const temas = ["system", "light", "dark", "luxury"];
+    const temas = ["system", "light", "dark", "retro"];
     const cambioTema = () => {
         const t = typeof theme === "string" ? theme : "system";
         if (t === "system") {

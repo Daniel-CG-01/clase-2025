@@ -20,7 +20,6 @@ export default function MainLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const temas = ['system', 'light', 'dark']
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -30,6 +29,8 @@ export default function MainLayout({
           attribute={"class"}
           defaultTheme="system"
           enableSystem
+          themes={['system', 'light', 'dark', 'retro']}
+          storageKey="app-theme"
           disableTransitionOnChange
         >
           {children}
