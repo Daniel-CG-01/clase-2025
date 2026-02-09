@@ -5,7 +5,7 @@ import sampleData from '@/db/sample-data';
 export default function HomePage() {
   return (
     <div className='wrapper'>
-      <ProductList data={sampleData.products} title='Mi lista'/>  
+      <ProductList data={sampleData.products} title='Mi lista' limit={4}/>  
     </div>
   )
 }
