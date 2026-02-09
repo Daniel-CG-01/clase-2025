@@ -20,7 +20,7 @@ export default function MainLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const temas = ['system', 'light', 'dark', 'cyberpunk']
+  const temas = ['system', 'light', 'dark']
   return (
     <html lang="en" suppressHydrationWarning>
       <body
