@@ -1,4 +1,6 @@
-const sampleData = {
+import { Prisma } from "@/lib/generated/prisma/client";
+
+const sampleData: { products: Prisma.ProductoCreateInput[] } = {
   products: [
     {
       name: 'Polo Sporting Stretch Shirt',
@@ -60,9 +62,9 @@ const sampleData = {
         '/images/sample-products/p4-1.jpg',
         '/images/sample-products/p4-2.jpg',
       ],
-      price: 39.95,
+      price: '39.95',
       brand: 'Calvin Klein',
-      rating: 3.6,
+      rating: '3.6',
       numReviews: 5,
       stock: 10,
       isFeatured: false,
