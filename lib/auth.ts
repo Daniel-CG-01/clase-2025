@@ -8,6 +8,6 @@ export const auth = betterAuth({
     }),
     emailAndPassword: { 
         enabled: true,
-        maxPasswordLength: 1,
+        minPasswordLength: 1,
     },
 })

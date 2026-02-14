@@ -6,4 +6,5 @@ export const SignUpDefaultValues = {
     name: "daniel",
     email: "daniel@gmail.com",
     password: "1234",
+    phone: "123456789",
 }

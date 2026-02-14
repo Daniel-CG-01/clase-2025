@@ -31,7 +31,9 @@ export default function SignUpPage() {
                     />
                 </Link>
                 <CardTitle className="text-center">Sign Up</CardTitle>
-                <CardDescription className="text-center">Sign up for a new account</CardDescription>
+                <CardDescription className="text-center">
+                    Sign up for a new account
+                </CardDescription>
             </CardHeader>
             <CardContent>
                 <CredentialsSignUpForm />
