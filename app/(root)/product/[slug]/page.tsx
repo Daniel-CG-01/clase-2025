@@ -28,7 +28,7 @@ export default async function ProductDetailsPage({
 
         {/* Columna detalles x2 */}
         <div className="col-span-2 p-5">
-            <div className="flex flex-col wrap-6">
+            <div className="flex flex-col gap-3">
                 <p>
                     {product.brand} {product.category}
                 </p>
