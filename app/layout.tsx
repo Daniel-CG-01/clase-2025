@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { APP_NAME, APP_DESCRIPTION, SERVER_URL } from '@/lib/constants';
 import { ThemeProvider } from 'next-themes';
+import { Toaster } from "@/components/ui/sonner";
 
 const interFont = Inter({
   variable: "--font-inter-sans",
@@ -29,11 +30,12 @@ export default function MainLayout({
           attribute={"class"}
           defaultTheme="system"
           enableSystem
+          disableTransitionOnChange
           themes={['system', 'light', 'dark', 'retro']}
           storageKey="app-theme"
-          disableTransitionOnChange
         >
           {children}
+          <Toaster richColors expand closeButton position="top-center" />
         </ThemeProvider>
       </body>
     </html>

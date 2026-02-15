@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { SignUpDefaultValues } from '@/lib/constants';
 import { authClient } from '@/lib/auth-client';
+import { toast } from "sonner";
 
 export default function CredentialsSignUpForm() {
         async function handleSubmit(evt: React.FormEvent<HTMLFormElement>) {
@@ -30,9 +31,11 @@ export default function CredentialsSignUpForm() {
                     onRequest: () => {},
                     onResponse: () => {},
                     onError: (ctx) => {
+                        toast.error(ctx.error.message);
                         console.log(ctx.error.message);
                     },
                     onSuccess: () => {
+                        toast.success("Registro correcto");
                         console.log("Registro correcto");
                     },
                 }
