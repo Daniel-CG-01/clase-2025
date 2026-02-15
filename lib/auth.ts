@@ -10,4 +10,13 @@ export const auth = betterAuth({
         enabled: true,
         minPasswordLength: 1,
     },
+    user: {
+        additionalFields: {
+            phone: {
+                type: "string",
+                required: false,
+                input: true,
+            }
+        }
+    }
 })

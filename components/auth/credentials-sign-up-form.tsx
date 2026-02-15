@@ -12,6 +12,7 @@ export default function CredentialsSignUpForm() {
             const formData = new FormData(evt.currentTarget);
             const name = String(formData.get("name"));
             const email = String(formData.get("email"));
+            const phone = String(formData.get("phone"));
             const password = String(formData.get("password"));
 
             // Comprobaciones de los campos del formulario
@@ -23,7 +24,7 @@ export default function CredentialsSignUpForm() {
                     email,
                     password,
                     name,
-                    callbackURL: "/profile",
+                    phone,
                 },
                 {
                     onRequest: () => {},
