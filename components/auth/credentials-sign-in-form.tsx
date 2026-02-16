@@ -43,7 +43,6 @@ export default function CredentialsSignInForm() {
                 id="email" 
                 name="email" 
                 type="text" 
-                defaultValue={SignUpDefaultValues.email}
                 required
             />
         </div>
@@ -53,7 +52,6 @@ export default function CredentialsSignInForm() {
                 id="password" 
                 name="password" 
                 type="text" 
-                defaultValue={SignUpDefaultValues.password}
                 required
             />
         </div>
