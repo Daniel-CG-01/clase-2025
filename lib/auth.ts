@@ -16,6 +16,11 @@ export const auth = betterAuth({
                 type: "string",
                 required: false,
                 input: true,
+            },
+            notifications: {
+                type: "string",
+                required: true,
+                input: true,
             }
         }
     }
