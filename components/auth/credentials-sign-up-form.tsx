@@ -29,23 +29,23 @@ export default function CredentialsSignUpForm() {
 
             // Comprobaciones de los campos del formulario
 
-            if (!name || !email) {
-                setError("ERROR: Por favor, rellene los campos obligatorios para registrarse.");
+            if (!name || !email || !phone) {
+                setError("Por favor, rellene los campos obligatorios para registrarse.");
                 return;
             }
-
+            
             if (password !== confirmPassword) {
-                setError("ERROR: La contraseña no coincide.");
+                setError("La contraseña no coincide.");
                 return;
             }
 
             if (!termsConditions) {
-                setError("ERROR: Es necesario marcar la opción de términos y condiciones para registrarse.");
+                setError("Es necesario marcar la opción de términos y condiciones para registrarse.");
                 return;
             }
-
+            
             if (!notifications) {
-                setError("ERROR: Es necesario marcar una de las dos opciones de notificaciones para registrarse.");
+                setError("Es necesario marcar una de las dos opciones de notificaciones para registrarse.");
                 return;
             }
 
@@ -81,7 +81,6 @@ export default function CredentialsSignUpForm() {
                 id="name"
                 name="name"
                 type="text"
-                required
             />
         </div>
         <div className="space-y-3">
@@ -90,7 +89,6 @@ export default function CredentialsSignUpForm() {
                 id="email"
                 name="email"
                 type="text"
-                required
             />
         </div>
         <div className="space-y-3">
@@ -108,7 +106,6 @@ export default function CredentialsSignUpForm() {
                 id="password"
                 name="password"
                 type="text"
-                required
             />
         </div>
         <div className="space-y-3">
@@ -117,7 +114,6 @@ export default function CredentialsSignUpForm() {
                 id="confirmPassword"
                 name="confirmPassword"
                 type="text"
-                required
             />
         </div>
         <div className="space-y-3">
@@ -125,7 +121,6 @@ export default function CredentialsSignUpForm() {
                 <Checkbox
                     id="termsConditions"
                     name="termsConditions"
-                    required
                 />
                 <Label htmlFor="termsConditions">I agree to the terms and conditions</Label>
             </div>
@@ -158,10 +153,10 @@ export default function CredentialsSignUpForm() {
         <div>
             <Button className="w-full" type="submit">Sign Up</Button>
             {error && (
-                <div className="mt-2 text-center">{error}</div>
+                <div className="mt-2 text-center text-sm text-red-500">{error}</div>
             )}
             <div className="mt-2 text-center space-x-2">
-                <span className="text-muted-foreground">Do you have an account?</span>
+                <span className="text-muted-foreground">Already have an account?</span>
                 <Link href="/sign-in" className="underline text-muted-foreground">Sign In</Link>
             </div>
         </div>

@@ -24,13 +24,12 @@ export default function ProductImages({ images }: ProductImagesProps) {
 
       {/* Perspectivas de imagen */}
       {images.length > 1 &&
-        <div className="flex gap-2 over-flow-x-auto">
+        <div className="flex justify-center gap-2 overflow-x-auto">
           {images.map((image, index) => (
-            /*
             <Button
-              key={index}
+              key={image}
               onClick={() => setSelectedImage(image)}
-              className={`relative shrink-0 w-0 h-0 rounded-md border-2 transition-all ${
+              className={`relative shrink-0 w-24 h-24 p-0 overflow-hidden rounded-md border-2 transition-all ${
                 selectedImage === image
                   ? 'border-black'
                   : 'border-gray-300 hover:border-gray-400'
@@ -44,19 +43,6 @@ export default function ProductImages({ images }: ProductImagesProps) {
                 className="w-full h-full object-cover rounded-md"
               />
             </Button>
-            */
-           <Image
-            src={image}
-            alt={`Imagen ${index + 1}`}
-            width={100}
-            height={100}
-            className="w-full h-full object-cover rounded-md"
-           >
-            <Button
-              key={index}
-              onClick={() => setSelectedImage(image)}
-            />
-           </Image>
           ))}
         </div>
       }

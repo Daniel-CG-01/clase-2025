@@ -13,13 +13,13 @@ export async function middleware(request: NextRequest) {
 	});
 
 	if (!session) {
-		// return NextResponse.redirect(new URL("/sign-in", request.url));
-        const signUrl = new URL("/sign-in", request.url);
-        signUrl.searchParams.set(
-            "callbackUrl"
-            request.nextUrl.pathname + request.nextUrl.search,
-        );
-        return NextResponse.redirect(signUrl);
+		return NextResponse.redirect(new URL("/sign-in", request.url));
+        // const signUrl = new URL("/sign-in", request.url);
+        // signUrl.searchParams.set(
+        //     "callbackUrl"
+        //     request.nextUrl.pathname + request.nextUrl.search,
+        // );
+        // return NextResponse.redirect(signUrl);
 	}
 
 	return NextResponse.next();
